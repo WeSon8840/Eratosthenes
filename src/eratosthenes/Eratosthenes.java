@@ -21,7 +21,22 @@ public class Eratosthenes {
             prime[i] = true;
         }
         for (int factor = 2; factor < Math.sqrt(n); factor++){
-            if (prime[factor])
+            if (prime[factor]){
+                for (int i =factor;factor*i<=n;i++){
+                    prime[factor*i] = false;
+                }
+            }
+        }
+        System.out.println("The prime numbers from 1--1000 are :\n");
+        
+        int count = 0;
+        for(int i=2;i<n;i++){
+            if(prime[i]){
+                System.out.println(i+" ");
+                count+=1;
+                if (count%10==0)
+                    System.out.println("\n");
+            }
         }
     }
     
