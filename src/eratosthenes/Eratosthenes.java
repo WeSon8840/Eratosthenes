@@ -32,7 +32,7 @@ public class Eratosthenes {
         int count = 0;
         for(int i=2;i<n;i++){
             if(prime[i]){
-                System.out.println(i+" ");
+                System.out.print(i+" ");
                 count+=1;
                 if (count%10==0)
                     System.out.println("\n");
